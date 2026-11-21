@@ -36,7 +36,7 @@ Diabetes-Prediction-System/
 
 Place the dataset CSV at `data/diabetes.csv`.
 
-Dataset source: **Add the original dataset URL and license here before publishing.**
+Dataset source: https://www.kaggle.com/code/mragpavank/pima-indians-diabetes-database/input
 
 The notebook expects the CSV path to be relative to the notebook folder:
 
@@ -56,7 +56,6 @@ The dataset is expected to contain these columns:
 - `Age`
 - `Outcome` (target)
 
-Do not upload private, identifiable patient information. Confirm that the dataset license permits redistribution before making the repository public.
 
 ## Setup
 
@@ -105,4 +104,4 @@ This project is for educational and demonstration purposes only. Its output is n
 
 ## Author
 
-Add your name and GitHub profile here.
+Shubham Sharma 
