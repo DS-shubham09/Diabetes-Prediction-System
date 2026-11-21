@@ -238,11 +238,11 @@ if page == "🩺 Diabetes Screening":
                 zero_columns
             ].replace(0, float("nan"))
 
-            # Apply training median imputer
-            input_data = pd.DataFrame(
-                imputer.transform(input_data),
-                columns=features
-            )
+            # Apply the saved training medians without calling imputer.transform().
+            # This avoids the missing _fill_dtype attribute error when the
+            # saved imputer and deployed scikit-learn versions differ.
+            median_values = pd.Series(imputer.statistics_, index=features)
+            input_data = input_data.fillna(median_values)
 
             # Prediction
             probability = model.predict_proba(input_data)[0][1]
